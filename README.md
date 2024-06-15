@@ -1,3 +1,13 @@
+### Disusun dan di rancang oleh
+Kelompok 6 TMK Mobile Robot:
+M Fat Hiy Ilman N 			(210491100003)
+Astri Nur P 				(210491100004)
+Siti Nurhalisa 			(210491100017)
+Devan Yusfa S 			(210491100027)
+Firman Aliyansyah S 		(210491100030)
+
+
+
 
 ![image](https://github.com/devanys/PRM-mobile-robot/assets/145944367/90ea5fc5-ac98-4d7b-aa30-3aa4d42a4b1e)
 
