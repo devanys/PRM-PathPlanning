@@ -7,6 +7,7 @@ Devan Yusfa S 			(210491100027)
 Firman Aliyansyah S 		(210491100030)
 
 
+![Screenshot 2024-06-20 190757](https://github.com/devanys/PRM-mobile-robot/assets/145944367/3fc0b7c1-e906-4cfd-8062-7faf953a64fa)
 
 
 ![image](https://github.com/devanys/PRM-mobile-robot/assets/145944367/90ea5fc5-ac98-4d7b-aa30-3aa4d42a4b1e)
