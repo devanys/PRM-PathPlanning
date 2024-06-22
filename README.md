@@ -9,10 +9,6 @@ Firman Aliyansyah S 		(210491100030)
 
 ![Untitled design (2)](https://github.com/devanys/PRM-mobile-robot/assets/145944367/4db39160-c5dc-4843-8296-f861937839b6)
 
-
-![image](https://github.com/devanys/PRM-mobile-robot/assets/145944367/90ea5fc5-ac98-4d7b-aa30-3aa4d42a4b1e)
-
-
 ### Implementasi Probabilistic Roadmap (PRM) untuk Mobile Robot
 
 Probabilistic Roadmap (PRM) adalah metode yang digunakan dalam perencanaan lintasan untuk robot mobile di lingkungan yang kompleks dan dinamis. Pendekatan ini menggabungkan konsep pemetaan lingkungan dengan teknik pengambilan sampel acak untuk membangun representasi grafis dari ruang konfigurasi robot. Tujuan utama dari PRM adalah untuk menciptakan jaringan titik-titik (nodes) yang terhubung oleh lintasan (edges) yang aman dan memungkinkan robot untuk bergerak dari posisi awal ke tujuan dengan efisien. melibatkan langkah-langkah berikut:
