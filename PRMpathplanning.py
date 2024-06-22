@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 from PIL import Image, ImageOps, ImageDraw
 
-# Definisi Node
 class Node:
     def __init__(self, x, y):
         self.x = x
@@ -39,7 +38,6 @@ def line_in_obstacle(x0, y0, x1, y1, inflated_obstacle_map):
     return False
 
 def bresenham(x0, y0, x1, y1):
-    """Bresenham's Line Algorithm."""
     dx = abs(x1 - x0)
     dy = abs(y1 - y0)
     sx = 1 if x0 < x1 else -1
@@ -57,8 +55,7 @@ def bresenham(x0, y0, x1, y1):
         if e2 < dx:
             err += dx
             y0 += sy
-
-# Membuat PRM (Probabilistic Roadmap)
+            
 def generate_random_nodes(num_nodes, x_max, y_max, inflated_obstacle_map):
     nodes = []
     while len(nodes) < num_nodes:
@@ -77,9 +74,8 @@ def connect_nodes(nodes, k, inflated_obstacle_map):
         distances.sort(key=lambda x: x[0])
         for d, other_node in distances[:k]:
             node.add_edge(other_node)
-            other_node.add_edge(node)  # Assuming undirected graph
-
-# Algoritma A* untuk Pencarian Jalur
+            other_node.add_edge(node)
+            
 def a_star(start, goal):
     open_list = []
     heapq.heappush(open_list, (0, start))
@@ -110,7 +106,6 @@ def a_star(start, goal):
 
     return None
 
-# Visualisasi Jalur
 def plot_prm(nodes, path=None, obstacle_map=None):
     if obstacle_map is not None:
         plt.imshow(obstacle_map, cmap='gray', origin='lower')
@@ -128,25 +123,22 @@ def plot_prm(nodes, path=None, obstacle_map=None):
     plt.scatter([start.x], [start.y], c='g', marker='o')
     plt.scatter([goal.x], [goal.y], c='r', marker='x')
     plt.show()
-
-# Parameter dan eksekusi
+    
 num_nodes = 100
 x_max = 1200
 y_max = 800
 k = 5
 
-# Load and inflate the obstacle map
-image_path = 'Obsticle.png'  # Update this path to the correct file path
+image_path = 'Obsticle.png'
 original_image = Image.open(image_path).convert('L')
 obstacle_map = np.array(original_image)
 
-# Inflate obstacles by creating a border around black pixels
-inflated_obstacle_map = ImageOps.expand(original_image, border=5, fill=255)  # Inflate by 5 pixels
+inflated_obstacle_map = ImageOps.expand(original_image, border=5, fill=255) 
 draw = ImageDraw.Draw(inflated_obstacle_map)
 for y in range(obstacle_map.shape[0]):
     for x in range(obstacle_map.shape[1]):
-        if obstacle_map[y, x] == 0:  # black pixel
-            draw.rectangle([x, y, x + 10, y + 10], fill=0)  # Inflate by 5 pixels in all directions
+        if obstacle_map[y, x] == 0:
+            draw.rectangle([x, y, x + 10, y + 10], fill=0)
 
 inflated_obstacle_map = np.array(inflated_obstacle_map)
 
