@@ -1,32 +1,35 @@
-### Disusun dan di rancang oleh
-Kelompok 6 TMK Mobile Robot:
-M Fat Hiy Ilman N 			(210491100003)
-Astri Nur P 				(210491100004)
-Siti Nurhalisa 			(210491100017)
-Devan Yusfa S 			(210491100027)
-Firman Aliyansyah S 		(210491100030)
-
-
 ![Untitled design (2)](https://github.com/devanys/PRM-mobile-robot/assets/145944367/4db39160-c5dc-4843-8296-f861937839b6)
 
-### Implementasi Probabilistic Roadmap (PRM) untuk Mobile Robot
+### Implementation of Probabilistic Roadmap (PRM)
 
-Probabilistic Roadmap (PRM) adalah metode yang digunakan dalam perencanaan lintasan untuk robot mobile di lingkungan yang kompleks dan dinamis. Pendekatan ini menggabungkan konsep pemetaan lingkungan dengan teknik pengambilan sampel acak untuk membangun representasi grafis dari ruang konfigurasi robot. Tujuan utama dari PRM adalah untuk menciptakan jaringan titik-titik (nodes) yang terhubung oleh lintasan (edges) yang aman dan memungkinkan robot untuk bergerak dari posisi awal ke tujuan dengan efisien. melibatkan langkah-langkah berikut:
+Probabilistic Roadmap (PRM) is a method used in trajectory planning for mobile robots in complex and dynamic environments. This approach combines the concept of environment mapping with random sampling techniques to build a graphical representation of the robot configuration space. The main goal of PRM is to create a network of connected points (nodes) with safe trajectories (edges) and enable the robot to move from the starting position to the destination efficiently. involves the following steps:
 
-1. **Pemetaan Lingkungan**:
-   - **Pemrosesan Data**: Data dari sensor diolah untuk membangun representasi digital lingkungan sekitar robot.
+1. **Environmental Mapping**:
+ - **Data Processing**: Data from sensors is processed to build a digital representation of the environment around the robot.
 
-2. **Pembentukan Probabilistic Roadmap**:
-   - **Node**: PRM menggunakan titik-titik sampel yang ditempatkan secara acak di ruang konfigurasi robot, mewakili posisi mulai, tujuan, dan titik-titik antara.
-   - **Hubungan Jalan**: Untuk setiap titik sampel, algoritma menentukan koneksi jalan antara titik-titik yang dapat dilewati tanpa bertabrakan dengan penghalang.
+2. **Probabilistic Roadmap Formation**:
+ - **Nodes**: PRM uses sample points randomly placed in the robot's configuration space, representing the start position, destination, and intermediate points.
+ - **Road Connections**: For each sample point, the algorithm determines the path connections between points that can be passed without colliding with obstacles.
 
-3. **Pencarian Lintasan Optimal**:
-   - **Algoritma Pencarian**: Algoritma seperti A* atau Dijkstra digunakan untuk mencari lintasan optimal antara titik awal dan tujuan dalam graf yang terdiri dari titik-titik sampel sebagai simpul dan koneksi jalan sebagai tepi.
+3. **Optimal Path Search**:
+ - **Search Algorithm**: Algorithms such as A* or Dijkstra are used to search for the optimal path between the start and destination points in a graph consisting of sample points as vertices and road connections as edges.
 ![image](https://github.com/devanys/PRM-mobile-robot/assets/145944367/cbcb24ea-b4d2-42c4-acb3-3b54052e2b04)
 ![image](https://github.com/devanys/PRM-mobile-robot/assets/145944367/b28f5f82-0ae5-4134-8002-ceaaa912ac6d)
 
-4. **Implementasi pada Robot Mobile**:
-   - **Kontrol Robot**: Lintasan yang dihasilkan dieksekusi oleh sistem kontrol robot untuk menggerakkan robot dari titik awal ke tujuan, mempertimbangkan dinamika robot dan hambatan lain.
-   - **Pembaruan Lintasan**: Robot dapat memperbarui perencanaan lintasan jika ada perubahan dalam lingkungan yang terdeteksi.
+4. **Implementation on Mobile Robot**:
+ - **Robot Control**: The resulting trajectory is executed by the robot control system to move the robot from the starting point to the destination, taking into account the dynamics of the robot and other obstacles.
+ - **Trajectory Update**: The robot can update its trajectory planning if any changes in the environment are detected.
 
-Implementasi PRM memungkinkan robot mobile untuk melakukan perencanaan lintasan dengan efisien dalam lingkungan yang kompleks dan berubah-ubah. Dengan memanfaatkan sampel acak dan algoritma pencarian, PRM dapat menangani tantangan navigasi dengan mempertimbangkan ketepatan, kecepatan, dan keamanan pergerakan robot.
+PRM implementation enables mobile robots to perform trajectory planning efficiently in complex and changing environments. By utilizing random samples and search algorithms, PRM can address navigation challenges by considering the accuracy, speed, and safety of robot movement.
+
+### Contributors
+- Dr. Muhammad Fuad, S.Kom., M.T
+- M Fat Hiy Ilman N
+- Astri Nur P
+- Siti Nurhalisa
+- Devan Yusfa S
+- Firman Aliyansyah S
+### Special Thanks
+- ### **Dr. Muhammad Fuad, S.Kom., M.T**
+We greatly appreciated for providing the foundational theories and serving as the instructor for the Mobile Robot course. Expertise and guidance have been invaluable to our learning experience.
+
