@@ -3,7 +3,6 @@ import math
 import heapq
 import matplotlib.pyplot as plt
 
-# Definisi Node
 class Node:
     def __init__(self, x, y):
         self.x = x
@@ -16,7 +15,6 @@ class Node:
 def distance(node1, node2):
     return math.sqrt((node1.x - node2.x)**2 + (node1.y - node2.y)**2)
 
-# Membuat PRM (Probabilistic Roadmap)
 def generate_random_nodes(num_nodes, x_max, y_max):
     nodes = []
     for _ in range(num_nodes):
@@ -34,9 +32,8 @@ def connect_nodes(nodes, k):
         distances.sort(key=lambda x: x[0])
         for d, other_node in distances[:k]:
             node.add_edge(other_node)
-            other_node.add_edge(node)  # Assuming undirected graph
+            other_node.add_edge(node)
 
-# Algoritma A* untuk Pencarian Jalur
 def a_star(start, goal):
     open_list = []
     heapq.heappush(open_list, (0, start))
@@ -67,7 +64,6 @@ def a_star(start, goal):
     
     return None
 
-# Visualisasi Jalur
 def plot_prm(nodes, path=None):
     for node in nodes:
         for edge in node.edges:
@@ -83,7 +79,6 @@ def plot_prm(nodes, path=None):
     plt.scatter([goal.x], [goal.y], c='r', marker='x')
     plt.show()
 
-# Parameter dan eksekusi
 num_nodes = 100
 x_max = 100
 y_max = 100
