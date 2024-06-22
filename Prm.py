@@ -127,7 +127,7 @@ class PRM_GUI:
     def run_simulation(self):
         if self.running:
             self.plan_and_move()
-            self.root.after(1000, self.run_simulation)  # update every second
+            self.root.after(1000, self.run_simulation)
 
     def plan_and_move(self):
         prm = PRM(tuple(self.ego_position), tuple(self.target_position), self.num_nodes, self.map_size, self.obstacles)
